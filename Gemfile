@@ -45,6 +45,7 @@ gem "whenever", :require => false
 gem "exception_notification"
 gem "letter_opener"
 gem "omniauth-shopqi"
+gem "shopkit"
 gem "awesome_print", :require => "ap", :group => [:development, :test]
 gem "factory_girl", :group => [:development, :test]
 gem "factory_girl_rails", :group => [:development, :test]
