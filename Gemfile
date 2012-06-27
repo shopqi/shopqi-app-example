@@ -1,10 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.4'
-
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
 gem 'sqlite3'
 
 
@@ -21,21 +17,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
 gem "unicorn"
-gem "sqlite3"
 gem "devise"
 gem "haml"
 gem "settingslogic"
@@ -46,11 +28,20 @@ gem "exception_notification"
 gem "letter_opener"
 gem "omniauth-shopqi"
 gem "shopkit"
-gem "awesome_print", :require => "ap", :group => [:development, :test]
-gem "factory_girl", :group => [:development, :test]
-gem "factory_girl_rails", :group => [:development, :test]
-gem "haml-rails", :group => :development
-gem "jquery-rails", :group => :development
-gem "rvm-capistrano", "~> 1.1.0", :require => "capistrano", :group => :development
-gem "rspec-rails", :group => :test
-gem "database_cleaner", :group => :test
+
+group :development, :test do
+  gem "awesome_print", :require => "ap"
+  gem "factory_girl"
+  gem "factory_girl_rails"
+end
+
+group :development do
+  gem "haml-rails"
+  gem "jquery-rails"
+  gem "rvm-capistrano", "~> 1.1.0", :require => "capistrano"
+end
+
+group :test do
+  gem "rspec-rails"
+  gem "database_cleaner"
+end
