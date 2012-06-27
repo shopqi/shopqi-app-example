@@ -9,11 +9,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if response = request.env['omniauth.auth']
+    if data = request.env['omniauth.auth']
       session[:shopqi] = { 
         url: params[:shop],
-        access_token: response['credentials']['token'],
-        shop: response['extra']['raw_info']['shop']
+        access_token: data['credentials']['token'],
+        shop: data['extra']['raw_info']['shop']
       }
       redirect_to dashboard_path
     else

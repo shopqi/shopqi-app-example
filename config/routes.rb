@@ -1,4 +1,4 @@
-ShopkitAppExample::Application.routes.draw do
+ShopQiAppExample::Application.routes.draw do
 
   match 'dashboard'    => 'home#dashboard'
 

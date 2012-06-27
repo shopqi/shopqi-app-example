@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-ShopkitAppExample::Application.load_tasks
+ShopQiAppExample::Application.load_tasks

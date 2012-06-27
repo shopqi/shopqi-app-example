@@ -29,4 +29,9 @@
           %a.accordion-toggle{href: "#product-#{product['id']}", data: {toggle: 'collapse', parent: '#product-accordion'}}
             =product['title']
         %div.accordion-body.collapse(id="product-#{product['id']}")
-          .accordion-inner=raw product['body_html']
+          .accordion-inner
+            %p==类型: #{product['product_type']}
+            %p==生产商: #{product['vendor']}
+            =raw product['body_html']
+            %br/
+            %p=link_to "前往 ShopQi 后台管理查看", "#{shop_url}/admin/products/#{product['id']}", class: 'btn btn-primary', target: :_blank

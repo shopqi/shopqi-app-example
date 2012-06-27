@@ -2,7 +2,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   provider :shopqi, 
     SecretSetting.oauth.client_id, 
     SecretSetting.oauth.secret,
-    :scope => '',
+    :scope => 'read_products read_orders',
     :callback_path => '/callback',
     :setup => lambda {|env| 
       params = Rack::Utils.parse_query(env['QUERY_STRING'])

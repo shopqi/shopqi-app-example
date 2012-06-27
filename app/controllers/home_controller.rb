@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   end
 
   def dashboard
-    Shopkit.setup url: session[:shopqi][:url], access_token: session[:shopqi][:access_token]
+    Shopkit.setup url: session[:shopqi][:url], access_token: session[:shopqi][:access_token] # was set in sessions controller
     @orders = Shopkit.orders per_page: 3
     @products = Shopkit.products per_page: 5
   end
