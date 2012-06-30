@@ -17,20 +17,13 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem "unicorn"
-gem "devise"
 gem "haml"
 gem "settingslogic"
 gem "less-rails-bootstrap"
-gem "seedbank"
-gem "whenever", :require => false
-gem "exception_notification"
-gem "letter_opener"
 gem "omniauth-shopqi"
 gem "shopkit"
 
 group :development, :test do
-  gem "awesome_print", :require => "ap"
   gem "factory_girl"
   gem "factory_girl_rails"
 end
