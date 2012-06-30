@@ -22,6 +22,14 @@ class SessionsController < ApplicationController
     end
   end
 
+  def callback_login
+    if signed_in?
+      redirect_to dashboard_path
+    else
+      redirect_to sessions_new_path(shop: params[:shop])
+    end
+  end
+
   def destroy
     session[:shopqi] = nil
     redirect_to root_path
