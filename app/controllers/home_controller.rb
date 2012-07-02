@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  prepend_before_filter :authenticate_shop!, except: :index
+  skip_before_filter :authenticate_shop!, only: :index
 
   def index
     if signed_in?

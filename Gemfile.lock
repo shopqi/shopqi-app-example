@@ -1,7 +1,7 @@
 PATH
   remote: ../shopqi-app
   specs:
-    shopqi-app (0.0.1)
+    shopqi-app (0.1.0)
       haml (~> 3.1.6)
       less-rails-bootstrap (~> 2.0.13)
       omniauth-shopqi (~> 0.1.0)
@@ -152,7 +152,6 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.1.1)
-  haml
   jquery-rails
   rails (= 3.1.4)
   sass-rails (~> 3.1.5)

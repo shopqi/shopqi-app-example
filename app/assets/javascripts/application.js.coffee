@@ -11,9 +11,6 @@
 ###
 
 $(document).ready ->
-  $('#shop').focus()
-
-  $('.dropdown-toggle').dropdown()
   ###
   #$('#main').tooltip selector: "span[rel=tooltip], a[rel=tooltip]"
   ###
