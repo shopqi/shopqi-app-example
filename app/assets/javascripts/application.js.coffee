@@ -3,6 +3,7 @@
 #= require_tree .
 
 #= require twitter/bootstrap/dropdown.js
+# accordion 依赖
 #= require twitter/bootstrap/transition.js
 #= require twitter/bootstrap/collapse.js
 ###
