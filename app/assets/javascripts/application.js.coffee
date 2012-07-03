@@ -11,6 +11,8 @@
 ###
 
 $(document).ready ->
+  $('#shop').focus()
+
   ###
   #$('#main').tooltip selector: "span[rel=tooltip], a[rel=tooltip]"
   ###
