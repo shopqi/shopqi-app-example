@@ -16,4 +16,4 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem "shopqi-app", path: '../shopqi-app'
+gem "shopqi-app"
