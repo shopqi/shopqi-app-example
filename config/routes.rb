@@ -1,4 +1,5 @@
 ShopQiAppExample::Application.routes.draw do
-  mount ShopQiApp::Engine => '/app'
-  root :to             => 'home#index'
+  root :to => 'home#index'
+
+  use_shopqi
 end

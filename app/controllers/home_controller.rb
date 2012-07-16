@@ -3,11 +3,11 @@ class HomeController < ApplicationController
 
   def index
     if signed_in?
-      Shopkit.setup url: session[:shopqi][:url], access_token: session[:shopqi][:access_token] # set in shopqi-app sessions controller
+      Shopkit.setup url: current_shop.shopqi_domain, access_token: current_shop.access_token # set in shopqi-app sessions controller
       @orders = Shopkit.orders per_page: 3
       @products = Shopkit.products per_page: 5
     else
-      redirect_to shopqi_app.login_path
+      redirect_to login_path
     end
   end
 end
